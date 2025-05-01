@@ -23,7 +23,7 @@ export interface Country {
   region:       string;
   subregion:    Subregion;
   languages:    Languages;
-  translations: { [key: string]: Translation };
+  translations: Record<string, Translation>;
   latlng:       number[];
   landlocked:   boolean;
   area:         number;
@@ -181,7 +181,7 @@ export interface Maps {
 export interface Name {
   common:     string;
   official:   string;
-  nativeName: { [key: string]: Translation };
+  nativeName: Record<string, Translation>;
 }
 
 export interface Translation {
